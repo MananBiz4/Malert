@@ -117,7 +117,7 @@ extension MalertView {
     }
     
     func enableButton(_ button: MalertAction, enable: Bool = true) {
-        (buttonsStackView.subviews.first(where: { ($0 as? UIButton)?.title(for: .normal) == button.title }) as? UIButton)?.isEnabled = false
+        (buttonsStackView.subviews.first(where: { ($0 as? UIButton)?.title(for: .normal) == button.title }) as? UIButton)?.isEnabled = enable
     }
     
 }
