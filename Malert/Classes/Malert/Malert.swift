@@ -190,3 +190,12 @@ extension Malert {
         malertView.enableButton(malertButton, enable: enable)
     }
 }
+
+extension Malert: UIGestureRecognizerDelegate {
+    public func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
+        if let button = touch.view as? MalertButtonView {
+            button.sendActions(for: .touchUpInside)
+        }
+        return true
+    }
+}
