@@ -126,6 +126,18 @@ extension Malert {
         set { malertView.backgroundColor = newValue }
     }
     
+    /// Leading space
+    public var leadingSpace: CGFloat {
+        get { return malertView.leadingSpace }
+        set { malertView.leadingSpace = newValue }
+    }
+    
+    /// Trailing space
+    public var trailingSpace: CGFloat {
+        get { return malertView.trailingSpace }
+        set { malertView.trailingSpace = newValue }
+    }
+    
     /* Title config */
     public var textColor: UIColor {
         get { return malertView.textColor }

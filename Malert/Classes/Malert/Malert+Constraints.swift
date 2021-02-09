@@ -26,8 +26,8 @@ extension Malert {
       malertConstraints = [
          malertView.centerXAnchor.constraint(equalTo: visibleView.centerXAnchor),
          malertView.centerYAnchor.constraint(equalTo: visibleView.centerYAnchor),
-         malertView.trailingAnchor.constraint(equalTo: visibleView.trailingAnchor, constant: -16),
-         malertView.leadingAnchor.constraint(equalTo: visibleView.leadingAnchor, constant: 16)
+         malertView.trailingAnchor.constraint(equalTo: visibleView.trailingAnchor, constant: -malertView.trailingSpace),
+         malertView.leadingAnchor.constraint(equalTo: visibleView.leadingAnchor, constant: malertView.leadingSpace)
       ]
       
       if UIDevice.current.orientation.isLandscape {

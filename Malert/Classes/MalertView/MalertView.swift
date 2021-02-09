@@ -21,6 +21,9 @@ public class MalertView: UIView {
     private var _buttonsSeparetorColor: UIColor = UIColor(white: 0.8, alpha: 1)
     private var _buttonsFont: UIFont = UIFont.systemFont(ofSize: 16)
     
+    private var leadingSpaceValue: CGFloat = 16
+    private var trailingSpaceValue: CGFloat = 16
+    
     private var inset: CGFloat = 0 {
         didSet { refreshViews() }
     }
@@ -240,6 +243,18 @@ extension MalertView {
     @objc public dynamic var margin: CGFloat {
         get { return inset }
         set { inset = newValue }
+    }
+    
+    /// Leading space
+    @objc public dynamic var leadingSpace: CGFloat {
+        get { return leadingSpaceValue }
+        set { leadingSpaceValue = newValue }
+    }
+    
+    /// Trailing space
+    @objc public dynamic var trailingSpace: CGFloat {
+        get { return trailingSpaceValue }
+        set { trailingSpaceValue = newValue }
     }
     
     /// Trailing and Leading margin inset to StackView buttons
